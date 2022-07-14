@@ -40,6 +40,10 @@
   border-bottom-right-radius: 20px;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .app > .left-menu .inbox-list .item.active {
   background-color: #ff000050;
 }

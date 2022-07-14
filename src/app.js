@@ -52,17 +52,29 @@ const App = () => {
       <Header />
       <nav className="left-menu">
         <ul className="inbox-list">
-          <li className="item active" onClick={() => setCurrentPage('inbox')}>
+          <li
+            className={`item pointer ${
+              currentPage === 'inbox' ? 'active' : ''
+            }`}
+            onClick={() => setCurrentPage('inbox')}
+          >
             <span className="label">Inbox</span>
             <span className="count">{emails.length}</span>
           </li>
-          <li className="item" onClick={() => setCurrentPage('starred')}>
+          <li
+            className={`item pointer ${
+              currentPage === 'starred' ? 'active' : ''
+            }`}
+            onClick={() => setCurrentPage('starred')}
+          >
             <span className="label">Starred</span>
             <span className="count">{getStarredEmails().length}</span>
           </li>
 
-          <li className="item toggle">
-            <label htmlFor="hide-read">Hide read</label>
+          <li className="item  toggle">
+            <label className="pointer" htmlFor="hide-read">
+              Hide read
+            </label>
             <input
               id="hide-read"
               type="checkbox"
