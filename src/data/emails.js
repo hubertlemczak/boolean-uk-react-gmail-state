@@ -1,4 +1,4 @@
-export default [
+export const initialEmails =  [
   {
     id: 1,
     sender: `Zoom`,
